@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0
+    ,maximum-scale=1,minimum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            -ms-overflow-style: none; /* IE 和 Edge */
+        scrollbar-width: none; /* Firefox */
+            }
+            /* 隐藏 Chrome、Safari 和 Opera 的滚动条 */
+        *::-webkit-scrollbar {
+        display: none;
+        }
+        body{
+            background-color:white;
+        }
+        .img0{
+            width: 100%;
+            height: auto;
+            position:absolute;
+            z-index: 2;
+            overflow: hidden;
+        }
+        .imgr{
+            width: auto;
+            height: auto;
+            position:absolute;
+            z-index: 3;
+            animation: fadeInOut 1.5s infinite;
+        }
+        .img1{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 1px;
+            z-index: 4;
+        }
+        .img2{
+            width:auto;
+            height:16%;
+            position: absolute;
+            left: 45%;
+            top: 60%;
+            z-index: 5;
+            animation: fadeInOut 1.5s infinite;
+        }
+        .divs{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .divs1{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            bottom: -490%;
+        }
+        .tu{
+            position: absolute;
+            z-index: 5;
+        }
+        .jixu{
+            width: auto;
+            height: auto;
+            position: absolute;
+            bottom:25%;
+            left:33%;
+            z-index: 6;
+        }
+        .buy{
+            width: auto;
+            height: auto;
+            position: absolute;
+            bottom:25%;
+            left:55%;
+            z-index: 6;
+        }
+        .fanhui{
+            width: auto;
+            height: auto;
+            position: absolute;
+            bottom:19%;
+            left:43%;
+            z-index: 6;
+        }
+        .tu,.fanhui{
+            animation: fadeInOut1 0.5s ;
+        }
+        @keyframes fadeInOut {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+        }       
+        @keyframes fadeInOut1 {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+        }                          
+    </style>
+</head>
+<body>
+    <div class="q">
+        <img src="img/冬长图.jpg" alt=""  class="img0">
+        <img src="img/冬.png" alt="" class="img1">
+        <img src="img/huadong.png" alt="" class="img2">
+       <!-- 人物1 -->
+        <img src="img/renwu0.png" alt="" class="imgr" style="top:85%;left:3%;">
+        <div style="display: none;" class="divs">
+            <img src="img/tu1.png" alt="" class="tu">
+            <img src="img/fanhui.png" alt="" class="fanhui">
+        </div>
+        <img src="img/renwu1.png" alt="" class="imgr" style="top:214% ;left:49%;">
+        <div style="display: none;" class="divs">
+            <img src="img/tu2.png" alt="" class="tu">
+            <img src="img/fanhui.png" alt="" class="fanhui">
+        </div>
+        <img src="img/renwu2.png" alt="" class="imgr" style="top:307% ;left:40%;">
+        <div style="display: none;" class="divs">
+            <img src="img/tu3.png" alt="" class="tu">
+            <img src="img/fanhui.png" alt="" class="fanhui" style="bottom: 17.5%;left:40%;">
+        </div>
+        <img src="img/renwu3.png" alt="" class="imgr" style="top:377% ;left:52%;">
+        <div style="display: none;" class="divs">
+            <img src="img/tu4.png" alt="" class="tu">
+            <img src="img/fanhui.png" alt="" class="fanhui" style="bottom: 17.2%;left:45%;">
+        </div>
+        <img src="img/renwu4.png" alt="" class="imgr" style="top:449%;left:7%;">
+        <div style="display: none;" class="divs">
+            <img src="img/tu5.png" alt="" class="tu">
+            <img src="img/fanhui.png" alt="" class="fanhui" style="bottom: 16.5%;left:44%;">
+        </div>
+        <img src="img/renwu5.png" alt="" class="imgr" style="top:525% ;left:28%;">
+        <div style="display: none;" class="divs">
+            <img src="img/tu6.png" alt="" class="tu">
+            <img src="img/fanhui.png" alt="" class="fanhui" style="bottom: 16.5%;left:45%;">
+        </div>
+        <div style="display: none;" class="divs1">
+            <img src="img/maishu.png" alt="" class="tu">
+            <img src="img/jixu.png" alt="" class="jixu">
+            <img src="img/buy.png" alt="" class="buy">
+        </div>
+    </div>
+     <script>
+         const div1=document.querySelector('.q')
+         const img0=document.querySelector('.img0')
+       const img1=document.querySelector('.img1')
+       const img2=document.querySelector('.img2')
+
+       const imgr0=document.querySelectorAll('.divs')[0]
+       const imgr1=document.querySelectorAll('.divs')[1]
+       const imgr2=document.querySelectorAll('.divs')[2]
+       const imgr3=document.querySelectorAll('.divs')[3]
+       const imgr4=document.querySelectorAll('.divs')[4]
+       const imgr5=document.querySelectorAll('.divs')[5]
+
+
+       const divs1=document.querySelector('.divs1')
+       const jixu=document.querySelector('.jixu')
+       const buy=document.querySelector('.buy')
+       let ystart
+       let yend
+       let Y
+       let Y1
+       let spa=0 //速度
+        div1.addEventListener('click',function(e){
+        imgr0.style.display = 'none'
+        imgr1.style.display = 'none'
+        imgr2.style.display = 'none'
+        imgr3.style.display = 'none'
+        imgr4.style.display = 'none'
+        imgr5.style.display = 'none'
+        if(e.target.className == 'imgr'){
+            e.target.nextElementSibling.style.display = 'block'
+            e.target.nextElementSibling.style.top = window.pageYOffset+'px'
+            e.target.nextElementSibling.children[1].addEventListener('click', function() {
+            e.target.nextElementSibling.style.display ='none'
+            });  
+        }
+    })
+  imgr5.addEventListener("touchend",(e)=>{
+                setTimeout(function(){
+                    divs1.style.display = 'block'
+                },1000)
+            })
+       img1.addEventListener("touchstart",(e)=>{
+       e.preventDefault(); // 阻止默认行为，如滚动或缩放
+        Y = e.touches[0].pageY; // 获取触点相对于页面的 Y 坐标
+        ystart=Y
+       })
+       img1.addEventListener("touchmove",(e)=>{
+       e.preventDefault(); // 阻止默认行为，如滚动或缩放
+       yend = e.touches[0].pageY; // 获取触点相对于页面的 Y 坐标
+       let imgtop = img1.getBoundingClientRect().top
+       img1.style.top =imgtop+yend-ystart+'px'
+       img2.style.top= parseInt(img1.style.top)+610+'px'
+       if(parseInt(img1.style.top)>0){
+        img1.style.top = 0+'px'
+        }
+       ystart = yend
+       })
+    //    关闭页面滑动
+    // 取消页面滑动
+        
+        img1.addEventListener("touchend",(e)=>{
+        e.preventDefault(); // 阻止默认行为，如滚动或缩放
+        Y1 = e.changedTouches[0].pageY; // 获取触点相对于页面的 Y 坐标
+         if(parseInt(img1.style.top)<=-240){
+            animate()
+       }
+       })
+       
+       jixu.addEventListener("touchend",(e)=>{
+        location.href = 'https://imgjq.gitee.io/225701229/section'
+       })
+       buy.addEventListener("touchend",(e)=>{
+        location.href = 'https://mbook.kongfz.com/195259/5341852909/'
+       })
+      // 上滑动画
+       function animate() {
+        let time1=setInterval(()=>{
+            spa += 0.2
+            img1.style.top= parseInt(img1.style.top)-spa+'px'
+            img2.style.top= parseInt(img1.style.top)+610+'px'
+            if(parseInt(img1.style.top)<=-1000){
+            img1.style.display = 'none'
+            img1.style.top = -1000+'px'
+            clearInterval(time1)
+            time1 = undefined;
+        }
+        },2)
+        
+        }
+   
+    </script>
+    
+</body>
+</html>
