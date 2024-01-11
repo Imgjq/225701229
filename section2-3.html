@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, mininum-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        }
+    html{
+        width: 100%;
+        height: 100%;
+        overflow:hidden;
+    }
+    body{
+        width: 100%;
+        height:100%;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        position: relative; 
+        z-index: 2; 
+    }
+    .juanzhou{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        z-index:3;
+    }
+    .tianse{
+        position: absolute;
+        top: 76%;
+        left: 2%;
+        z-index:3;
+    }
+    .suiji{
+        position: absolute;
+        top:76%;
+        left:80%;
+        z-index:3;
+    }
+    .finish{
+        position: absolute;
+        top: 88%;
+        left: 86%;
+        z-index:3;
+    }
+    
+    .tu1{
+        display: none;
+        position: absolute;
+        z-index: 3;
+    }
+    .tu2{
+        display: none;
+        position: absolute;
+        z-index: 3;
+    }
+    .tu3{
+        display: none;
+        position: absolute;
+        z-index: 3;
+    }
+    .colors{
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        z-index: 4;
+    
+    }
+    .colors>div{
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        border-radius: 100%;
+        border:6px solid white;
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <img src="img/huaban.PNG" alt="" class="xiabg">
+        <img src="img/juanzhou.PNG" alt="" class="juanzhou">
+        <img src="img/tianse.png" alt="" class="tianse">
+        <img src="img/suijiyanse.png" alt="" class="suiji">
+        <img src="img/wanchen.png" alt="" class="finish">
+        <img src="img/dianjihuahua.png" alt="" class="tu1">
+        <img src="img/dianjihuahua.png" alt="" class="tu2">
+        <img src="img/dianjihuahua.png" alt="" class="tu3">
+        <!-- 色卡 -->
+        <div class="colors">
+            <div class="colors1" style="left:10%;top:40%;background-color: red;">
+
+            </div>
+            <div class="colors2" style="left: 38%;top: 40%;background-color: red;">
+
+            </div>
+            <div class="colors3" style="left: 66%;top: 40%;background-color: red;">
+
+            </div>
+            <div class="colors4" style="left: -4%;top: 86%;background-color: red;">
+
+            </div>
+            <div class="colors5" style="left: 24%;top: 86%;background-color: red;">
+
+            </div>
+            <div class="colors6" style="left: 52%;top: 86%;background-color: red;">
+
+            </div>
+            <div class="colors7" style="left: 80%;top: 86%;background-color: red;">
+
+            </div>
+        </div>
+    </div>
+</body>
+    <script>
+        const container=document.querySelector('.container')
+        const xiabg=document.querySelector('.xiabg')
+        const juanzhou=document.querySelector('.juanzhou')
+        const tianse=document.querySelector('.tianse')
+        const suiji=document.querySelector('.suiji')
+        const finish=document.querySelector('.finish')
+        const tu1=document.querySelector('.tu1')
+        const tu2=document.querySelector('.tu2')
+        const tu3=document.querySelector('.tu3')
+        const colors=document.querySelector('.colors')
+        const colorsk=document.querySelectorAll('.colors>div')
+        // 事前准备
+            tu1.style.display = 'none';
+            tu2.style.display = 'none';
+            tu3.style.display = 'none';
+
+        // 调试适应
+        xiabg.style.width = container.offsetWidth+"px"
+        xiabg.style.height = container.offsetHeight+'px'
+        juanzhou.style.width = container.offsetWidth+"px"
+        juanzhou.style.height = container.offsetHeight+'px'
+        tianse.style.width = container.offsetWidth*0.096+"px"
+        tianse.style.height = container.offsetHeight*0.12+'px'
+        suiji.style.width = container.offsetWidth*0.15585+"px"
+        suiji.style.height = container.offsetHeight*0.102675+'px'
+        finish.style.width = container.offsetWidth*0.097265+"px"
+        finish.style.height = container.offsetHeight*0.10922+'px'
+        tu1.style.width = container.offsetWidth*0.3+"px"
+        tu1.style.height =container.offsetHeight*0.2+"px"
+        tu2.style.width = container.offsetWidth*0.3+"px"
+        tu2.style.height = container.offsetHeight*0.2+"px"
+        tu3.style.width =container.offsetWidth*0.3+"px"
+        tu3.style.height = container.offsetHeight*0.2+"px"
+        colors.style.width = container.offsetWidth*0.7+"px"
+        colors.style.height = container.offsetHeight*0.2+'px'
+        colorsk[0].style.width = container.offsetWidth*0.14+"px"
+        colorsk[0].style.height = container.offsetWidth*0.14+'px'
+        colorsk[1].style.width = container.offsetWidth*0.14+"px"
+        colorsk[1].style.height = container.offsetWidth*0.14+'px'
+        colorsk[2].style.width = container.offsetWidth*0.14+"px"
+        colorsk[2].style.height = container.offsetWidth*0.14+'px'
+        colorsk[3].style.width = container.offsetWidth*0.14+"px"
+        colorsk[3].style.height = container.offsetWidth*0.14+'px'
+        colorsk[4].style.width = container.offsetWidth*0.14+"px"
+        colorsk[4].style.height = container.offsetWidth*0.14+'px'
+        colorsk[5].style.width = container.offsetWidth*0.14+"px"
+        colorsk[5].style.height = container.offsetWidth*0.14+'px'
+        colorsk[6].style.width = container.offsetWidth*0.14+"px"
+        colorsk[6].style.height = container.offsetWidth*0.14+'px'
+        
+        
+
+        // 事件
+        colors.addEventListener('touchend',function(e){
+            for(let i=0;i<7;i++){
+                colorsk[i].style.borderColor = "white"
+            }
+            e.target.style.borderColor = "black"
+        })
+        // 获取上一个网页传入的参数
+        function GetRequest() {
+					var url = location.search; //获取url中"?"符后的字串
+					var theRequest = new Object();
+					if (url.indexOf("?") != -1) {
+						var str = url.substr(1);
+						strs = str.split("&");
+						for (var i = 0; i < strs.length; i++) {
+							theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+						}
+					}
+					return theRequest;
+				}
+			// 	console.log(GetRequest().userId);  //2
+            //     switch(GetRequest().userId){
+            // case 1:tu1.style.display = 'block';
+            // case 2:tu2.style.display = 'block';
+            // case 3:tu3.style.display = 'block';
+        // }
+    </script>
+</html>
