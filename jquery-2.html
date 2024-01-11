@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>选择卡片</title>
+		<style type="text/css">
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+
+			}
+
+			.main {
+				max-width: 99%;
+				position: relative;
+				margin: 0 auto;
+				text-align: center;
+				height: 100vh;
+				overflow: hidden;
+			}
+
+			.bg {
+				position: relative;
+				margin: auto;
+				width: fit-content;
+				overflow: hidden;
+			}
+
+			#bgimg {
+				max-width: 100%;
+				max-height: 100%;
+				height: 100vh;
+			}
+
+			#rock {
+				position: absolute;
+				width: 66%;
+				left: 50%;
+				transform: translate(-50%, 0);
+				bottom: 1%;
+				z-index: 1;
+			}
+
+			#choose {
+				position: absolute;
+				width: 38%;
+				left: 54%;
+				transform: translate(-50%, 0);
+				bottom: 10%;
+				z-index: 1;
+			}
+
+			#top {
+				position: absolute;
+				width: 100%;
+				height: 12%;
+				left: 50%;
+				transform: translate(-50%, 0);
+				bottom: 89%;
+				z-index: 1;
+
+			}
+
+			#left {
+				position: absolute;
+				width: 10%;
+				left: 5%;
+				transform: translate(-50%, 0);
+				bottom: 47%;
+				z-index: 1;
+
+			}
+
+			#right {
+				position: absolute;
+				width: 10%;
+				left: 95%;
+				transform: translate(-50%, 0);
+				bottom: 47%;
+				z-index: 1;
+			}
+
+			#card {
+				position: absolute;
+				width: 90%;
+				height: 67%;
+				left: 50%;
+				transform: translate(-50%, 0);
+				bottom: 24%;
+				z-index: 1;
+			}
+
+			#picture {
+				position: absolute;
+				width: 45%;
+				left: 50%;
+				transform: translate(-50%, 0);
+				bottom: 38%;
+				z-index: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="bg">
+				<img id="bgimg" src="img/select-bg.PNG" />
+				<img id="rock" src="img/select-rock.PNG" />
+				<img id="choose" src="img/select-choose.png" onclick="next()"/>
+				<img id="top" src="img/select-top.PNG" />
+				<img id="card" src="img/select-card.PNG" />
+				<img id="picture" src="img/select-card1.jpg" />
+				<img id="left" src="img/select-change-left.png" onclick="left()"/>
+				<img id="right" src="img/select-change-right.PNG" onclick="right()"/>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+		<script>
+		    var index = 1;
+		    var obj = $("#picture")[0];
+		
+		    function left() {
+		        index--;
+		        if (index === 0) {
+		            index = 6;
+		        }
+		        obj.src = "img/select-card" + index + ".jpg";
+		    }
+		
+		    function right() {
+		        index++;
+		        if (index === 7) {
+		            index = 1;
+		        }
+		        obj.src = "img/select-card" + index + ".jpg";
+		    }
+		
+		    function next() {
+		        window.location.href = "https://imgjq.github.io/225701229/select-paint";
+		    }
+		</script>
+
+	</body>
+</html>
